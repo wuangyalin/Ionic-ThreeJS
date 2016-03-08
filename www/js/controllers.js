@@ -1,3 +1,4 @@
+angular.module('starter.controllers', ['backand','ngCordova'])
 
 .controller('loveCtrl',function($scope){
 

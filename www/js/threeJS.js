@@ -49,8 +49,8 @@ angular.module('starter.threeJS', [])
       camera.position.set(0,150,400);
       camera.lookAt(scene.position);  */
 
-            camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 4000 );
-            camera.position.set( 0, 150, 1300 );
+      camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 4000 );
+      camera.position.set( 0, 150, 1300 );
 
       // RENDERER
       if ( Detector.webgl )
@@ -374,9 +374,11 @@ angular.module('starter.threeJS', [])
 
           //  mouse.x = ( ( event.clientX - xOff ) / container.clientWidth ) * 2 - 1;
           //  mouse.y = - ( ( event.clientY - yOff ) / container.clientHeight ) * 2 + 1;
-            mouse.x = ( ( event.touches[0].clientX - xOff ) / container.clientWidth ) * 2 - 1;
-            mouse.y = - ( ( event.touches[0].clientY - yOff ) / container.clientHeight ) * 2 + 1;
-
+            mouse.x = ( ( event.touches[0].clientX - xOff ) / container.offsetWidth ) * 2 - 1;
+            mouse.y = - ( ( event.touches[0].clientY - yOff ) / container.offsetHeight ) * 2 + 1;
+            console.log(container.offsetWidth);
+            console.log(container.offsetHeight);
+            
           objControl.detach();
           controls.enabled = true;
           // find intersections
@@ -416,9 +418,10 @@ angular.module('starter.threeJS', [])
         var xOff = getOffset(glFrame).left; 
         var yOff = getOffset(glFrame).top; 
 
-        mouse.x = ( ( event.clientX - xOff ) / container.clientWidth ) * 2 - 1;
-        mouse.y = - ( ( event.clientY - yOff ) / container.clientHeight ) * 2 + 1;
-
+        mouse.x = ( ( event.clientX - xOff ) / container.offsetWidth ) * 2 - 1;
+        mouse.y = - ( ( event.clientY - yOff ) / container.offsetHeight ) * 2 + 1;
+            console.log(container.offsetWidth);
+            console.log(container.offsetHeight);
       objControl.detach();
       controls.enabled = true;
       // find intersections
