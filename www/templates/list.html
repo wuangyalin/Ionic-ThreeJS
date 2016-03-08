@@ -1,0 +1,21 @@
+    <ion-view view-title="学习">
+              <ion-nav-buttons side="right">
+            <button class="button button-icon" ng-click="newTask()">
+              <i class="icon ion-compose"></i>
+            </button>
+          </ion-nav-buttons>
+     <ion-content>
+          <a class="item item-icon-left assertive" onclick="audioControl()">
+            <i class="icon ion-music-note" ></i>
+          </a>
+        <ion-list>
+          <div class="list">
+            <ion-item ng-repeat="task in tasks" ng-click="showDetail()">
+              {{task.title}}
+              <ion-option-button  class="button-assertive icon ion-trash-a" ng-click="deleteTask(task)">
+              </ion-option-button>
+            </ion-item>
+          </div>
+        </ion-list>
+      </ion-content>
+    </ion-view>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/jquery-ui.css" />
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="js/ng-cordova.min.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+    <script src="lib/angularbknd-sdk/dist/backand.min.js"></script>
+    <script type="text/javascript" src="lib/jquery.min.js"></script>
+    <script src="js/typed.js"></script>
+    <script src="js/emailFun.js"></script>
+
+
+<!-- Three js -->
+    <script src="js/lib/three.min.js"></script>
+    <script src="js/lib/controls/OrbitControls.js"></script>
+    <script src="js/lib/loaders/OBJLoader.js"></script>
+    <script src="js/lib/loaders/OBJMTLLoader.js"></script>
+    <script src="js/lib/loaders/MTLLoader.js"></script>
+    <script src="js/lib/TransformControls.js"></script>
+    <script src="js/lib/Detector.js"></script>
+
+
+        <!-- your app's js -->
+    <script src="js/app.js"></script>
+  </head>
+  <body ng-app="starter" onload="timeElapse()">
+      <audio id="myAudio" autoplay>
+        <source src="yuanyuan.mp3" type="audio/mp3" />
+      </audio>
+      <ion-nav-bar class="nav-title-slide-ios8 bar-positive">
+    <ion-nav-back-button class="button-icon ion-arrow-left-c">
+    </ion-nav-back-button>
+  </ion-nav-bar>
+  <ion-nav-view animation="slide-left-right"></ion-nav-view>
+  <script type="text/javascript">
+      function typeee(){
+            // make conversation
+            $('#story').typed({
+                strings: ["记得当时年少，^2000我爱谈天你爱笑，^2000有一回并肩坐在桃树下，^2000不知不觉，^2000我们睡着了，^2000梦里花落知多少."],
+                typeSpeed: 200,
+                backDelay: 500,
+                loop: false,
+                loopCount: false,
+          });
+      }
+
+  </script>
+  </body>
+</html>

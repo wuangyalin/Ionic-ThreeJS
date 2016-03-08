@@ -1,0 +1,14 @@
+    <ion-view view-title="心愿瓶">
+      <ion-nav-buttons side="right">
+        <button class="button button-icon button-clear ion-email" onclick="openDraft()"></button>
+      </ion-nav-buttons>
+      <ion-content class="padding">
+        <button class="button button-full button-assertive" ng-click="takePhoto()">
+        Take Photo
+          </button>
+        <button class="button button-full button-assertive" ng-click="choosePhoto()">
+        Choose Photo
+        </button>
+        <img ng-show="imgURI !== undefined" ng-src="{{imgURI}}" style="text-align: center">
+      </ion-content>
+    </ion-view>

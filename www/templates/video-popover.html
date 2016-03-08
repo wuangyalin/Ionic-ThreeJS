@@ -1,0 +1,9 @@
+<div class="modal transparent fullscreen-player" ng-click="closeModal()" >
+
+
+    <ion-slide-box on-slide-changed="slideChanged(index)" show-pager="true" active-slide="activeVideo">
+        <ion-slide ng-repeat="vid in clipSrc">
+                <video ng-src="{{vid.src}}" class="centerme" controls="controls"></video>
+        </ion-slide>
+    </ion-slide-box>
+</div>

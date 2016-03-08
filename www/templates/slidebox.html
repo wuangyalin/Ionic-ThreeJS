@@ -1,0 +1,28 @@
+    <ion-view view-title="Slidebox">
+      <ion-content class="has-header padding">
+        <br><br>
+      <div class="item item-divider">
+        <i class="ion-images"></i>
+        Images
+        </div>
+      <a class="item item-list-detail">
+        <ion-scroll direction="x">
+          <img ng-repeat="image in allImages" ng-src="{{image.src}}" ng-click="showImages($index)" class="image-list-thumb"/>
+        </ion-scroll>
+      </a>
+      <br><br>
+
+      <div class="item item-divider">
+        <i class="ion-images"></i>
+        Videos
+        </div>
+      <a class="item item-list-detail">
+        <ion-scroll direction="x">
+          <img ng-repeat="image in allImages" ng-src="{{image.src}}" ng-click="playVideo($index)" class="image-list-thumb"/>
+        </ion-scroll>
+      </a>
+      <br><br>
+
+      </ion-content>
+
+    </ion-view>
