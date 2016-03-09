@@ -137,7 +137,7 @@ angular.module('starter.threeJS', [])
     }
 
     function addBed(){
-      addObj('bed',0.6,0.6,0.6,0,0,0,0,0,0);
+      addObj('bednew',100,100,100,0,0,0,0,0,0);
     }
 
     function rotate(){
@@ -185,18 +185,26 @@ angular.module('starter.threeJS', [])
             var onError = function ( xhr ) {
             };
 
-            // model
-            var loader = new THREE.OBJMTLLoader();
-            loader.load( 'models/door/door.obj', 'models/door/door.mtl', function ( object ) {
+            //model 
+            var mtlLoader = new THREE.MTLLoader();
+            mtlLoader.setBaseUrl('models/door/');
+            mtlLoader.setPath('models/door/');
 
-              object.scale.set(200,200,200);
-              object.position.set(-wallWidth/2,0,-300);
-              object.rotation.y = Math.PI/2;
+            mtlLoader.load('door.mtl',function(materials){
+              materials.preload();
 
+              var objLoader = new THREE.OBJLoader;
+              objLoader.setMaterials(materials);
+              objLoader.setPath('models/door/');
+              objLoader.load('door.obj',function(object){
+                object.scale.set(200,200,200);
+                object.position.set(-wallWidth/2,0,-300);
+                object.rotation.y = Math.PI/2;
 
-              walls.add( object );
+                walls.add( object );
+              }, onProgress, onError);
+            });
 
-            }, onProgress, onError );
     }
 
 
@@ -259,10 +267,10 @@ angular.module('starter.threeJS', [])
           loader.load('models/'+name+'/'+name+'.js', function (geometry, mat) {
                 for(var i=0;i<mat.length;i++){
                     var material = mat[ i ];
-                    material.color.setHex( 0xffffff );
+                    material.color.setHex( 0xffffff);
                 }
 
-          var faceMaterial = new THREE.MeshFaceMaterial( mat );
+          var faceMaterial = new THREE.MultiMaterial( mat );
 
           var object = new THREE.Mesh(geometry, faceMaterial);
                 object.rotation.x = rotate_x;
@@ -294,11 +302,11 @@ angular.module('starter.threeJS', [])
       var wallGeo = new THREE.PlaneBufferGeometry(wallWidth, wallHight);
 
             
-      var wallTexture = THREE.ImageUtils.loadTexture('models/grey.jpg');
+      var wallTexture = THREE.ImageUtils.loadTexture('textures/grey.jpg');
       wallTexture.minFilter = THREE.LinearFilter;
       wallTexture.magFilter = THREE.LinearFilter;
 
-      var floorTexture = THREE.ImageUtils.loadTexture('models/floor.jpg');
+      var floorTexture = THREE.ImageUtils.loadTexture('textures/walls/floor.jpg');
       //var floorTexture = THREE.ImageUtils.loadTexture('textures/grey.jpg');
       floorTexture.minFilter = THREE.LinearFilter;
       floorTexture.magFilter = THREE.LinearFilter;

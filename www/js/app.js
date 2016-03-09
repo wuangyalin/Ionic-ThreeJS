@@ -91,6 +91,14 @@ angular.module('starter', ['ionic','backand','starter.controllers','starter.serv
         }
       }
     })
+    .state('menu.3DRoom', {
+      url: "/3DRoom",
+      views: {
+        'menuContent': {
+          templateUrl: "templates/3DRoom.html"
+        }
+      }
+    })
     .state('menu.about', {
       url: "/about",
       views: {

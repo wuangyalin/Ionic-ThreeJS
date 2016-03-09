@@ -1,0 +1,32 @@
+newmtl bed1:fusta_llit
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd rojiza.jpg
+Ni 1.00
+Ks 0.27 0.27 0.27
+Ns 37.25
+newmtl bed1:sobrecolchon_patron1_jpg_001
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd patron1.jpg
+Ni 1.00
+Ks 0.24 0.24 0.24
+Ns 0.00
+newmtl lambert2SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd patron1.jpg
+Ni 1.00
+newmtl lambert3SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd rojiza.jpg
+Ni 1.00
