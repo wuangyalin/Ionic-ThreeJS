@@ -228,6 +228,14 @@ $scope.clipSrc = [{
   };
 })
 
+.controller('SessionsCtrl', function($scope, Restdata) {
+    $scope.sessions = Restdata.query();
+})
+
+.controller('SessionCtrl', function($scope, $stateParams, Restdata) {
+    $scope.session = Restdata.get({sessionAuthor: $stateParams.sessionAuthor});
+})
+
 .service('TodoService', function ($http, Backand) {
   var baseUrl = '/1/objects/';
   var objectName = 'todos/';

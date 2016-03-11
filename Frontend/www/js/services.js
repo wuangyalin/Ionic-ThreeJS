@@ -1,4 +1,4 @@
-angular.module('starter.services', [])
+angular.module('starter.services', ['ngResource'])
 
 .factory('StudyNotes', function() {
   return {
@@ -13,4 +13,7 @@ angular.module('starter.services', [])
       window.localStorage['StudyNotes'] = angular.toJson(task);
     }
   }
+})
+.factory('Restdata', function ($resource) {
+    return $resource('http://localhost:5000/sessions/:sessionAuthor');
 });

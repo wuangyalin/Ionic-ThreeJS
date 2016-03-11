@@ -99,6 +99,24 @@ angular.module('starter', ['ionic','backand','starter.controllers','starter.serv
         }
       }
     })
+    .state('menu.sessions', {
+      url: "/sessions",
+      views: {
+        'menuContent': {
+          templateUrl: "templates/sessions.html",
+          controller: 'SessionsCtrl'
+        }
+      }
+    })
+    .state('menu.session', {
+      url: "/sessions/:sessionAuthor",
+      views: {
+          'menuContent': {
+            templateUrl: "templates/session.html",
+            controller: 'SessionCtrl'
+        }
+      }
+    })
     .state('menu.about', {
       url: "/about",
       views: {
