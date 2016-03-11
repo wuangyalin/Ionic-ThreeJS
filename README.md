@@ -2,7 +2,7 @@
 Ionic Applications integrate with ThreeJS
 Aimming to practice the basic functions of Mobile Applications Using IONIC
 ##Client Side##
-===================================================================
+
 ###TODO LIST#####
 1. Add ToDo list into the application
 2. There are two kinds of ToDo Lists in the application.
@@ -23,7 +23,7 @@ Aimming to practice the basic functions of Mobile Applications Using IONIC
 
 ###Send Email#########
 1. This application can send Email using the local device Email Applications.
-====================================================================================
+
 ##Server Side##
 ====================================================================================
 ##Get Data using rest from json file
