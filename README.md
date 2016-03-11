@@ -25,6 +25,5 @@ Aimming to practice the basic functions of Mobile Applications Using IONIC
 1. This application can send Email using the local device Email Applications.
 
 ##Server Side##
-====================================================================================
-##Get Data using rest from json file
+Get rest data from json file.
 
