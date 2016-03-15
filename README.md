@@ -27,3 +27,20 @@ Aimming to practice the basic functions of Mobile Applications Using IONIC
 ##Server Side##
 Get rest data from json file.
 
+###MongoDB### updated: 15/03/2016
+1. Use MongoDB to store json file.
+  1.1 node importJson.js
+2. Retrieval data from MongoDB.
+  2.1 node server.js
+3. Run mongodb: /mongodb/bin/mongod
+
+So: there are totlay three severs implement this application.
+1. client side: ionic serve
+2. server side: node server.js
+3. database side: mongod
+
+
+
+
+
+
