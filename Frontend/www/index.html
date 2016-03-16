@@ -39,7 +39,6 @@
     <script src="js/app.js"></script>
         <script src="js/controllers.js"></script>
     <script src="js/services.js"></script>
-    <script src="js/3DRoom.js"></script>
 
   </head>
   <body ng-app="starter" onload="timeElapse()">
@@ -61,6 +60,14 @@
                 loop: false,
                 loopCount: false,
           });
+      }
+
+      function audioControl(){
+        var aud = document.getElementById("myAudio"); 
+        if(aud.paused){
+          aud.play();
+        }else aud.pause();
+
       }
   </script>
   </body>

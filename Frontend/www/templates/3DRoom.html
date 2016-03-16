@@ -4,14 +4,26 @@
       </ion-nav-buttons>
 
       <ion-content class="padding">
+                <a class="item item-icon-left assertive" onclick="audioControl()">
+            <i class="icon ion-music-note" ></i>
+          </a>
         <div class="card">
           <div class="item">
             <p>Create a 3D room</p>
           </div>    
         </div>
-        <div id="test"></div>
-        <cardboardd-gl id="section">
-          ThreeJS 3D Room:
-        </cardboardd-gl>
+        <div id="test">  
+          <button class="button button-dark" ng-click="addRoom()">
+          Add Room
+        </button>  
+        <button class="button button-dark" ng-click="addBed()">
+          Add Bed
+        </button>  
+        <button class="button button-dark" ng-click="addTv()">
+          Watch Tv
+        </button> 
+      </div>
+        <div id="three"></div>
+
       </ion-content>
     </ion-view>
