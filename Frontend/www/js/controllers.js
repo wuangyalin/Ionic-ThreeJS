@@ -697,7 +697,8 @@ $scope.clipSrc = [{
 })
 
 .controller('SessionCtrl', function($scope, $stateParams, Restdata) {
-    $scope.session = Restdata.get({sessionAuthor: $stateParams.sessionAuthor});
+    $scope.session = Restdata.get({sessionImdbID: $stateParams.sessionImdbID});
+
 })
 
 .service('TodoService', function ($http, Backand) {

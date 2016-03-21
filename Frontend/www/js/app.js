@@ -110,7 +110,7 @@ angular.module('starter', ['ionic','backand','starter.controllers','starter.serv
       }
     })
     .state('menu.session', {
-      url: "/sessions/:sessionAuthor",
+      url: "/sessions/:sessionImdbID",
       views: {
           'menuContent': {
             templateUrl: "templates/session.html",

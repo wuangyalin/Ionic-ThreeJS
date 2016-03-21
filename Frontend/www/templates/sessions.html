@@ -1,8 +1,13 @@
-<ion-view view-title="Sessions">
+<ion-view view-title="Movies">
   <ion-content>
-    <ion-list>
-      <ion-item ng-repeat="session in sessions"
-        href="#/menu/sessions/{{session.author}}">{{session.title}}</ion-item>
-    </ion-list>
+  <h1>Movie Search</h1>
+  <div class="list" >
+  	<a class="item item-thumbnail-left" ng-repeat="session in sessions" href="#/menu/sessions/{{session.imdbID}}" >
+  		<img src="{{session.Poster}}">
+  		<h2>{{session.Title}}</h2>
+  		<p>Year: {{session.Year}}</p>
+  		<p>Type: {{session.Type}}</p>
+  	</a>
+  </div>
   </ion-content>
 </ion-view>

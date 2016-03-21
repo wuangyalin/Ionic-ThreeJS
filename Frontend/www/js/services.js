@@ -15,5 +15,5 @@ angular.module('starter.services', ['ngResource'])
   }
 })
 .factory('Restdata', function ($resource) {
-    return $resource('http://localhost:5000/sessions/:sessionAuthor');
+    return $resource('http://localhost:5000/sessions/:sessionImdbID');
 });
